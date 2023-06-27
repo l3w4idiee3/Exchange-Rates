@@ -19,3 +19,11 @@ def ApiRequests(request):
             print("Error: Conversion rate not available.")
     else:
         print("Error: Failed to retrieve the conversion rate.")
+def calcultionOfMoney():
+    return (money * conversion_rate)/source_currency
+def displayConversion():
+    result = f"{calcultionOfMoney()} USD"
+print("Thank for using our system if u were not satisfied inform us so that we can improve !!!")
+user_prompt()
+ApiRequests(request)
+displayConversion()
