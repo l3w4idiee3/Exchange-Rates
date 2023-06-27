@@ -9,4 +9,10 @@ def ApiRequests(request):
     source_currency = "KES"
     target_currency = "USD"
     request_url = "https://api.apilayer.com/exchangerates/latest?access_key=c8be12fdd1b2e455cb535031"
-    
+    response = request.get(request_url)
+    if response.status_code == 200:
+        data = response.json()
+        conversion_rate = data['rate']
+        print(f"The conversion rate from {source_currency} to {target_currency} is: {conversion_rate}")
+    else:
+        raise Exception('Error')
