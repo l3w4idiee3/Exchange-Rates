@@ -12,7 +12,10 @@ def ApiRequests(request):
     response = request.get(request_url)
     if response.status_code == 200:
         data = response.json()
-        conversion_rate = data['rate']
-        print(f"The conversion rate from {source_currency} to {target_currency} is: {conversion_rate}")
+        if 'rate' in data:
+            conversion_rate = data['rate']
+            print(f"The conversion rate from {source_currency} to {target_currency} is: {conversion_rate}")
+        else:
+            print("Error: Conversion rate not available.")
     else:
-        raise Exception('Error')
+        print("Error: Failed to retrieve the conversion rate.")
