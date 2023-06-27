@@ -6,6 +6,7 @@ def user_prompt():
     source_currency = float(input("Please enter the source currency: "))
     target_currency = float(input("Enter the currency you want to exchange to: "))
 def ApiRequests(request):
-    api_url = 'https://real-time-currency-rates.p.rapidapi.com/getcurrencyrate',
-    api_key = "YOUR_API_KEY"
+    source_currency = "KES"
+    target_currency = "USD"
+    request_url = "https://api.apilayer.com/exchangerates/latest?access_key=c8be12fdd1b2e455cb535031"
     
