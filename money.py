@@ -5,5 +5,7 @@ def user_prompt():
     money = float(input("Enter the amount you want to be converted: "))
     source_currency = float(input("Please enter the source currency: "))
     target_currency = float(input("Enter the currency you want to exchange to: "))
-def ApiRequests():
+def ApiRequests(request):
     api_url = 'https://real-time-currency-rates.p.rapidapi.com/getcurrencyrate',
+    api_key = "YOUR_API_KEY"
+    
