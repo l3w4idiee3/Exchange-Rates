@@ -39,4 +39,4 @@ def display_conversion(converted_amount, target_currency):
 print("Thank for using our system if u were not satisfied inform us so that we can improve !!!")
 money, conversion_rate = user_prompt()
 converted_amount = calculate_conversion(money, conversion_rate)
-display_conversion(converted_amount, target_currency)
+display_conversion(converted_amount, "USD")
